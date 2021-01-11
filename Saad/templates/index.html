@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>My Project</title>
+    <style type="text/css">
+        p{
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<nav class="nav-wraper blue" >
+    <h1 class="center">School Management 101</h1>
+    <h3><a href="./admin" class="red">LogIN</a></h3>
+</nav>
+<br><br>
+<div class="row">
+<div class="col s6 l6" >
+<h1>Students :</h1>
+ {% for student in students %}
+     <div style="border: 2px solid;">
+     <h4 class="center">{{ student.name }}</h4>
+     <p class="center">Section : {{ student.section }}</p>
+     <p class="center">rollno. : {{ student.rollno }}</p>
+     </div>
+ {% endfor %}
+</div>
+<div class="col s6 l6">
+<div class="container">
+<h1>TEACHERS :</h1>
+ {% for teacher in teachers %}
+     <div style="border: 2px solid;">
+     <h4 class="center">{{ teacher.name }}</h4>
+     <p class="center">CNIC: {{ teacher.CNIC }}</p>
+     </div>
+ {% endfor %}
+</div>
+</div>
+</div>
+</body>
+</html>
